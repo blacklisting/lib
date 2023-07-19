@@ -1,17 +1,17 @@
 package com.blacklisting.lib.entries
 
-import com.blacklisting.lib.zhihu.DataStructure
-import com.blacklisting.lib.zhihu.FileHandler
+import com.blacklisting.lib.qq.DataStructure
+import com.blacklisting.lib.qq.FileHandler
 import java.io.File
 import kotlin.system.exitProcess
 
-object Zhihu
+object QQ
 {
     fun cli()
     {
         while (true)
         {
-            print("zhihu > ")
+            print("qq > ")
             try
             {
                 val input = readln().split(Regex("\t"))
@@ -21,7 +21,7 @@ object Zhihu
                     "new" ->
                     {
                         print("Name: ")
-                        FileHandler.new("zhihu/" + readln() + ".csv")
+                        FileHandler.new("qq/" + readln() + ".csv")
                     }
                     "add" ->
                     {
@@ -37,7 +37,7 @@ object Zhihu
                     "read" ->
                     {
                         print("Name: ")
-                        FileHandler.read("zhihu/" + readln() + ".csv")
+                        FileHandler.read("qq/" + readln() + ".csv")
                     }
                     "write" ->
                     {
@@ -60,7 +60,7 @@ object Zhihu
     @JvmStatic
     fun main(args: Array<String>)
     {
-        File("zhihu").walkTopDown()
+        File("qq").walkTopDown()
             .onEnter {
                 !it.name.startsWith(".")
             }

@@ -1,11 +1,21 @@
 package com.blacklisting.lib
 
+import com.blacklisting.lib.entries.QQ
 import com.blacklisting.lib.entries.Zhihu
-import java.io.IOException
 import kotlin.system.exitProcess
 
 object Cli
 {
+    fun batch()
+    {
+
+    }
+
+    fun commit()
+    {
+
+    }
+
     @JvmStatic
     fun main(args: Array<String>)
     {
@@ -18,7 +28,10 @@ object Cli
                 when (input[0])
                 {
                     "exit", "quit" -> exitProcess(0)
+                    "batch" -> batch()
+                    "qq" -> QQ.cli()
                     "zhihu" -> Zhihu.cli()
+                    "commit" -> commit()
                 }
             }
             catch (e: Exception)

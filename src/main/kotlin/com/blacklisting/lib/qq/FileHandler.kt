@@ -1,4 +1,4 @@
-package com.blacklisting.lib.zhihu
+package com.blacklisting.lib.qq
 
 import java.io.File
 

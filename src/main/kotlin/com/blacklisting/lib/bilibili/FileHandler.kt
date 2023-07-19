@@ -25,6 +25,7 @@ object FileHandler
     fun write(filePath: String) = write(File(filePath))
 
     fun write(file: File) = file.apply {
+        parentFile.mkdirs()
         writeText(DataStructure.definitions.joinToString(separator = ",") + "\n")
         data.sorted().forEach {
             appendText("$it\n")
