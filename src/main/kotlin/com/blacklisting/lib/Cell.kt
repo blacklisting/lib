@@ -6,5 +6,4 @@ data class Cell(
 ) : Comparable<Cell>
 {
     override fun compareTo(other: Cell): Int = if (def.needQuote) value.compareTo(other.value) else value.toLong().compareTo(other.value.toLong())
-
 }

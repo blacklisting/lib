@@ -3,7 +3,7 @@ package com.blacklisting.lib
 enum class Domain(val rowDefs: List<RowDef>, val sortIndex: Int)
 {
     Bilibili(
-        listOf(
+        rowDefs = listOf(
             RowDef("username", "用户名", true),
             RowDef("uid", "UID", true),
             RowDef("videoTitle", "评论视频标题", true),
@@ -12,27 +12,27 @@ enum class Domain(val rowDefs: List<RowDef>, val sortIndex: Int)
             RowDef("time", "评论时间", true),
             RowDef("ip", "IP 属地", true)
         ),
-        1
+        sortIndex = 1
     ),
     Qq(
-        listOf(
+        rowDefs = listOf(
             RowDef("nickname", "昵称", true),
             RowDef("qq", "QQ 号", false),
             RowDef("description", "描述", true),
         ),
-        1
+        sortIndex = 1
     ),
     Weixin(
-        listOf(
+        rowDefs = listOf(
             RowDef("nickname", "昵称", true),
             RowDef("wxid", "wxid", false),
             RowDef("id", "微信号", false),
             RowDef("description", "描述", true)
         ),
-        1
+        sortIndex = 1
     ),
     Zhihu(
-        listOf(
+        rowDefs = listOf(
             RowDef("username", "用户名", true),
             RowDef("id", "ID", true),
             RowDef("question", "问题", true),
@@ -41,6 +41,6 @@ enum class Domain(val rowDefs: List<RowDef>, val sortIndex: Int)
             RowDef("time", "时间", true),
             RowDef("answerLink", "回答链接", true)
         ),
-        1
+        sortIndex = 1
     )
 }
