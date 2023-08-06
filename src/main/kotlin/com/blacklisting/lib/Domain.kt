@@ -1,8 +1,9 @@
 package com.blacklisting.lib
 
-enum class Domain(val rowDefs: List<RowDef>, val sortIndex: Int)
+enum class Domain(val folderName: String, val rowDefs: List<RowDef>, val sortIndex: Int,)
 {
     Bilibili(
+        folderName = "bilibili",
         rowDefs = listOf(
             RowDef("username", "用户名", true),
             RowDef("uid", "UID", true),
@@ -15,14 +16,16 @@ enum class Domain(val rowDefs: List<RowDef>, val sortIndex: Int)
         sortIndex = 1
     ),
     Qq(
+        folderName = "qq",
         rowDefs = listOf(
             RowDef("nickname", "昵称", true),
-            RowDef("qq", "QQ 号", false),
+            RowDef("qq", "QQ 号", false, true),
             RowDef("description", "描述", true),
         ),
         sortIndex = 1
     ),
     Weixin(
+        folderName = "weixin",
         rowDefs = listOf(
             RowDef("nickname", "昵称", true),
             RowDef("wxid", "wxid", false),
@@ -32,6 +35,7 @@ enum class Domain(val rowDefs: List<RowDef>, val sortIndex: Int)
         sortIndex = 1
     ),
     Zhihu(
+        folderName = "zhihu",
         rowDefs = listOf(
             RowDef("username", "用户名", true),
             RowDef("id", "ID", true),
