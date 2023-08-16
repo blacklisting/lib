@@ -1,12 +1,12 @@
 package com.blacklisting.lib
 
-enum class Domain(val folderName: String, val rowDefs: List<RowDef>, val sortIndex: Int,)
+enum class Domain(val folderName: String, val rowDefs: List<RowDef>, val sortIndex: Int)
 {
     Bilibili(
         folderName = "bilibili",
         rowDefs = listOf(
             RowDef("username", "用户名", true),
-            RowDef("uid", "UID", true),
+            RowDef("uid", "UID", false, true),
             RowDef("videoTitle", "评论视频标题", true),
             RowDef("videoBv", "评论视频 BV", true),
             RowDef("content", "评论内容", true),
